@@ -1,0 +1,14 @@
+{% extends "layout.html" %} 
+{% block mainpart %} 
+{% from "includes/_formhelpers.html" import render_field %}
+<form method="post">
+  <dl>{{ render_field(form.firstname) }} {{ render_field(form.lastname) }}</dl>
+  <p><input type="submit" value="Register" /></p>
+</form>
+<br>
+{% for user in users %}
+<p>{{user.firstname}}</p>
+<p>{{user.lastname}}</p>
+ {% endfor %} 
+
+{% endblock mainpart %}</p>

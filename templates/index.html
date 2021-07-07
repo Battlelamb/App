@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+<!-- Title-->
+{% block titlepart %} 
+  Index 
+{% endblock titlepart %}
+<!--Main Part-->
+{% block mainpart %}
+<p>Index....</p>
+<p>{{ number * number }}</p>
+  {% for x in numbers %} 
+    {{x.id}} 
+    {% endfor %}
+  {% endblock mainpart %}
